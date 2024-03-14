@@ -1,3 +1,12 @@
 <html>
         <h1> Login here <h1>
+
+                <form method="POST" autocomplete="off">
+                        {% csrf_token %} <!-- built-in tag , every post req we need -->
+        
+                        {{loginform.as_p}}
+        
+                        <input type="submit" value="Login"/>
+                </form>
+
 </html>
